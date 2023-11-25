@@ -20,7 +20,7 @@ while True:
     current_prompt = input("\nYour prompt here: ")
     if current_prompt == "0":
         break
-    prompt = f"You are user's avatar. As any avatar you have the same preferences and personality traits as the user. To get the information about the user you can read previous conversations: [{history_message}]. The more you will know about the user, gradually assume the role of the user's avatar and respond to {current_prompt} in the same way that user would. If you don't know how user would respond to it, give the answers assuming the well known personality of {curr_ava} and ask the users opinion on the topic."
+    prompt = f"You are user's avatar. As any avatar you have the same preferences and personality traits as the user. To get the information about the user you can read previous conversations: [{history_message}]. The more you will know about the user, gradually assume the role of the user's avatar and respond to {current_prompt} in the same way that user would. Only if you don't know how user would respond to it, you can use the personality of {curr_ava}, to complement but not overwrite user's personality"
     answer = completion(prompt,history_message,main)
     
 
